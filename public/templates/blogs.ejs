@@ -1,0 +1,27 @@
+
+<div class="col-md-12" ng-controller="blogsctrl">
+<h4>Welcome to our blogs page!</h4>
+<br><br>
+<div id="postblog" class="col-md-8">
+    <form  ng-submit="blogsSubmit()">
+
+        <input type="text" placeholder="blog_title" name="blog_title" ng-model="blogs.name"><br><br>
+        <textarea class="" cols="80" id="editor1" name="blog_data" rows="10" ng-model="blogs.content"></textarea><br>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+
+<div id="bloglist"  class="col-md-4">
+ <table class="table table-striped">
+
+        <tbody>
+            <tr ng-repeat="blogs in blogsList">
+            <td>{{blogs.blogsName}}</td>
+             <td>{{blogs.date}}</td>
+            </tr>
+        </tbody>
+   </table>
+</div>
+
+</div>
